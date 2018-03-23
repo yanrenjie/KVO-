@@ -13,6 +13,8 @@
 		317535E22064D43400325FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317535E12064D43400325FB9 /* Assets.xcassets */; };
 		317535E52064D43400325FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317535E32064D43400325FB9 /* LaunchScreen.storyboard */; };
 		317535E82064D43400325FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 317535E72064D43400325FB9 /* main.m */; };
+		317535F02064D44F00325FB9 /* NSObject+AJieKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 317535EF2064D44F00325FB9 /* NSObject+AJieKVO.m */; };
+		317535F32064D46A00325FB9 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 317535F22064D46A00325FB9 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		317535E42064D43400325FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		317535E62064D43400325FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317535E72064D43400325FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		317535EE2064D44F00325FB9 /* NSObject+AJieKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AJieKVO.h"; sourceTree = "<group>"; };
+		317535EF2064D44F00325FB9 /* NSObject+AJieKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AJieKVO.m"; sourceTree = "<group>"; };
+		317535F12064D46A00325FB9 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		317535F22064D46A00325FB9 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				317535D92064D43400325FB9 /* AppDelegate.m */,
 				317535DB2064D43400325FB9 /* ViewController.h */,
 				317535DC2064D43400325FB9 /* ViewController.m */,
+				317535F12064D46A00325FB9 /* Student.h */,
+				317535F22064D46A00325FB9 /* Student.m */,
+				317535EE2064D44F00325FB9 /* NSObject+AJieKVO.h */,
+				317535EF2064D44F00325FB9 /* NSObject+AJieKVO.m */,
 				317535DE2064D43400325FB9 /* Main.storyboard */,
 				317535E12064D43400325FB9 /* Assets.xcassets */,
 				317535E32064D43400325FB9 /* LaunchScreen.storyboard */,
@@ -143,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				317535DD2064D43400325FB9 /* ViewController.m in Sources */,
+				317535F02064D44F00325FB9 /* NSObject+AJieKVO.m in Sources */,
+				317535F32064D46A00325FB9 /* Student.m in Sources */,
 				317535E82064D43400325FB9 /* main.m in Sources */,
 				317535DA2064D43400325FB9 /* AppDelegate.m in Sources */,
 			);
@@ -279,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "KVO原理探究/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.KVO----";
@@ -292,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "KVO原理探究/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.KVO----";

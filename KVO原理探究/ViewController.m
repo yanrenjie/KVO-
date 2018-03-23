@@ -7,23 +7,33 @@
 //
 
 #import "ViewController.h"
+#import "Student.h"
+#import "NSObject+AJieKVO.h"
 
 @interface ViewController ()
-
+@property(nonatomic, strong)Student *student;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = UIColor.whiteColor;
+    Student *stu = [[Student alloc] init];
+    [stu jie_addObserver:self forKeyPath:@"stu_name" options:0 context:@"Student"];
+    _student = stu;
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    self.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255) / 255.0 green:arc4random_uniform(255) / 255.0 blue:arc4random_uniform(255) / 255.0 alpha:1];
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    static int i = 0;
+    NSString *name = [NSString stringWithFormat:@"stu_name%d", i];
+    _student.stu_name = name;
+}
 
 @end
